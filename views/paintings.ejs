@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                Név
+            </th>
+            <th>
+                Év
+            </th>
+            <th>
+                Kiállítva
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <%= paintings.title %> 
+            </td>
+            <td>
+                <%= paintings.year %> 
+            </td> 
+            <td>  
+                <% if (paintings.on_display!=-1) { %>
+                    <% if (paintings.on_display==0) { %>
+                        Nincs kiállítva
+                    <% } else { %>
+                        Kiállítva
+                    <% } %>  
+                <% } %>
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
